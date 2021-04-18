@@ -2,7 +2,6 @@ package guru.springfamework.api.v1.mapper;
 
 import guru.springfamework.api.v1.model.CategoryDTO;
 import guru.springfamework.domain.Category;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -23,7 +22,7 @@ public class CategoryMapperTest  {
         category.setId(ID);
 
         //when
-        CategoryDTO categoryDTO = categoryMapper.categoryToCategoryDto(category);
+        CategoryDTO categoryDTO = categoryMapper.categoryToCategoryDTO(category);
 
         //then
         assertEquals(Long.valueOf(ID), categoryDTO.getId());

@@ -11,11 +11,11 @@ import java.util.stream.Collectors;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
-    private final CategoryMapper cateroryMapper;
+    private final CategoryMapper categoryMapper;
     private final CategoryRepository categoryRepository;
 
     public CategoryServiceImpl(CategoryMapper categoryMapper, CategoryRepository categoryRepository) {
-        this.cateroryMapper = categoryMapper;
+        this.categoryMapper = categoryMapper;
         this.categoryRepository = categoryRepository;
     }
 
@@ -24,12 +24,12 @@ public class CategoryServiceImpl implements CategoryService {
     public List<CategoryDTO> getAllCategories() {
         return categoryRepository.findAll()
                 .stream()
-                .map(cateroryMapper::categoryToCategoryDTO)
+                .map(categoryMapper::categoryToCategoryDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
     public CategoryDTO getCategoryByName(String name) {
-        return cateroryMapper.categoryToCategoryDTO(categoryRepository.findByName(name));
+        return categoryMapper.categoryToCategoryDTO(categoryRepository.findByName(name));
     }
 }

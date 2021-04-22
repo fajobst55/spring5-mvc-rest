@@ -8,16 +8,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Created by jt on 9/27/17.
+ * Created by jt on 10/6/17.
  */
-@Entity
 @Data
-public class Customer {
+@Entity
+public class Vendor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstname;
-    private String lastname;
+    private String name;
 }

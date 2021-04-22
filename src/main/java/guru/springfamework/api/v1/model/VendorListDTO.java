@@ -2,15 +2,17 @@ package guru.springfamework.api.v1.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 /**
- * Created by jt on 9/26/17.
+ * Created by jt on 10/8/17.
  */
 @Data
 @AllArgsConstructor
-public class CategoryListDTO {
+@NoArgsConstructor
+public class VendorListDTO {
 
-    List<CategoryDTO> categories;
+    List<VendorDTO> vendors;
 }

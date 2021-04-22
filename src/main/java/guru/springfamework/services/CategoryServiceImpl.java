@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Created by jt on 9/26/17.
+ */
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
@@ -19,9 +22,9 @@ public class CategoryServiceImpl implements CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
-
     @Override
     public List<CategoryDTO> getAllCategories() {
+
         return categoryRepository.findAll()
                 .stream()
                 .map(categoryMapper::categoryToCategoryDTO)
